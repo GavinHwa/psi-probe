@@ -121,7 +121,7 @@
 
 					function updateAppInfo() {
 						new Ajax.Updater('runtimeAppInfo',
-						'<c:url value="/appruntimeinfo.ajax"/>?<c:out value="${pageContext.request.queryString}"/>',
+						'<c:url value="/appruntimeinfo.ajax"><c:param value="${pageContext.request.queryString}"/></c:url>',
 						{method:'get', asynchronous: false});
 
 						// changing visibility of markup items that depend on an application status
